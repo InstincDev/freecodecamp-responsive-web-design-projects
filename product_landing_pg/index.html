@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FCC-Product Page</title>
+  </head>
+
+  <style>
+    /* User Story #13: The navbar should always be at the top of the viewport. */
+    * {
+      box-sizing: border-box;
+    }
+    #header {
+      position: fixed;
+      top: 0
+    }
+    #nav-bar {
+      position: fixed;
+    }
+    #header-img {
+      max-width: 100px;
+      height: auto;
+      width: 100%;
+    }
+    #logo {
+      float: left;
+    }
+    #head-link {
+      /* position: float; */
+      float: right;
+    }
+    #about-info {
+      position: relative;
+      height: auto;
+    }
+    #video {
+      max-width: 500px;
+      height: auto;
+      width: 100%;
+    }
+
+    /* User Story #14: My product landing page should have at least one media query. */
+
+    /*User Story #15: My product landing page should utilize CSS flexbox at least once.*/
+  </style>
+
+  <header id="header">
+    <!-- User Story #1: My product landing page should have a header element with a corresponding id="header". -->
+    <nav id="nav-bar">
+      <!-- User Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
+      <div id="logo">
+        <img
+          id="header-img"
+          src="/product_landing_pg/assets/sample-logo.png"
+          alt="header image"
+        />
+      </div>
+
+      <!-- User Story #3: Within the #header element I can see a nav element with a corresponding id="nav-bar". -->
+
+      <!-- User Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link. -->
+      <!-- User Story #5: When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page. -->
+      <div id="head-link">
+        <ul>
+          <li><a class="nav-link" href="#about-info">About</a></li>
+          <li><a class="nav-link" href="#review-info">Video</a></li>
+          <li><a class="nav-link" href="#review-info">Reviews</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <!-- User Story #6: I can watch an embedded product video with id="video". -->
+    <section id="about-info">
+      <h2>Quality Service</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quod,
+        assumenda nam maxime magni accusamus, rem vel corrupti, eius excepturi
+        autem ea vero harum magnam.
+      </p>
+      <h2>Profesional</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum,
+        delectus saepe molestias natus fuga rem.
+      </p>
+      <h2>Competitive Pricing</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo corrupti
+        veritatis totam magni facere incidunt sunt repudiandae mollitia facilis
+        amet cumque, odit natus est doloremque. Rerum nemo repudiandae quisquam
+        temporibus!
+      </p>
+    </section>
+
+    <section id="video-contain">
+      <video
+        id="video"
+        src="/product_landing_pg/assets/hd0174.mov"
+        controls
+      ></video>
+    </section>
+
+    <section id="review-info">
+      <article id="review1">
+        <h2 class="review-title">Great Staff</h2>
+        <p class="review-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+          consequuntur neque molestias, voluptatum non quaerat vitae possimus
+          quasi esse tenetur commodi quae, laboriosam incidunt unde obcaecati
+          quia fugiat officia numquam? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Dolorem, numquam harum quo non ratione omnis saepe
+          ad hic laborum, maiores voluptatum praesentium fuga deserunt voluptate
+          nobis recusandae alias animi itaque repudiandae incidunt ipsam maxime?
+          Dicta hic aperiam exercitationem qui odit?
+        </p>
+      </article>
+
+      <article id="review2">
+        <h2 class="review-title">Fast Service</h2>
+        <p class="review-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis,
+          officiis adipisci cupiditate eveniet dolor tempore ad molestiae quia
+          ut animi, dicta sit soluta magni enim odio asperiores voluptates
+          placeat praesentium? Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Ipsa quos earum accusantium? Soluta assumenda ad,
+          quia doloribus esse aspernatur. Quibusdam, assumenda, in distinctio ex
+          maiores minima rerum dolor recusandae blanditiis dicta sequi
+          voluptatibus ipsum facilis.
+        </p>
+      </article>
+
+      <article id="review3">
+        <h2 class="review-title">Very Helpful</h2>
+        <p class="review-text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          illum excepturi eum! Harum praesentium architecto fugit accusantium
+          optio minus id quae commodi at. Autem, perferendis? Ex quia similique
+          magni ea. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Quod cupiditate quae, iusto sequi animi perspiciatis ex, ea enim iure
+          repellat reiciendis delectus et minima culpa?
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <!-- User Story #7: My landing page has a form element with a corresponding id="form". -->
+
+        <!-- User Story #8: Within the form, there is an input field with id="email" where I can enter an email address. -->
+        <input type="email" id="email" name="email" placeholder="Email" />
+        <!-- User Story #9: The #email input field should have placeholder text to let the user know what the field is for. -->
+
+        <!-- User Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
+
+        <!-- User Story #11: Within the form, there is a submit input with a corresponding id="submit". -->
+        <input type="submit" id="submit" value="Submit" />
+        <!-- User Story #12: When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit). -->
+      </form>
+    </section>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
