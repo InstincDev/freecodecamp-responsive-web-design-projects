@@ -7,16 +7,87 @@
     <title>FCC-Tribute Page</title>
   </head>
   <style>
+    /* User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size. */
+    body {
+      box-sizing: boarder-box;
+      background-color: #faf9f6;
+    }
+    h1,
+    h2,
+    h3 {
+      color: #1b0000;
+    }
+
+    #img-caption {
+      color: #331800;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    main {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    /* User Story #9: The img element should be centered within its parent element. */
+    #title{
+      font-size: 45px;
+    }
+    #img-div{
+      margin: -15px auto 0 auto;
+    }
     #image {
       display: block;
-      max-width: 150px;
-      width: 100%;
-      height: auto;
+      width: 95%;
+      max-width: 200px;
+      margin: 0 auto;
+      border-radius: 100%;
     }
+    #tribute-info {
+      background-color: #fff;
+      border-radius: 5px;
+      margin: 25px auto 20px auto;
+      padding-right: 25px;
+    }
+
+    #tribute-text {
+      text-align: left;
+      color: #331800;
+    }
+    ul {
+      max-width: 550px;
+      /* margin: 0 auto 50px auto; */
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    li {
+      margin: 15px;
+    }
+    footer {
+      font-size: 12px;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: #5f0000;
+    }
+    a:hover{
+      text-decoration:underline;
+    }
+
   </style>
   <body>
     <!-- User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements. -->
-    <main id="main">
+    <header>
       <div id="title-div">
         <!-- User Story #2: I should see an element with a corresponding id="title", which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug"). -->
         <h1 id="title">Eliza Hamilton</h1>
@@ -33,7 +104,9 @@
         <!-- User Story #5: Within the img-div element, I should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in img-div. -->
         <figcaption id="img-caption">Eliza Hamilton at age 94</figcaption>
       </figure>
+    </header>
 
+    <main id="main">
       <!-- User Story #6: I should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page. -->
       <section id="tribute-info">
         <h2 id="tribute-title">Life Summary of Eliza Hamilton</h2>
