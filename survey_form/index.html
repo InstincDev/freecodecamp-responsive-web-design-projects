@@ -5,84 +5,246 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FCC-Survey Form</title>
+
+    <style>
+      @font-face {
+        font-family: nunito;
+        src: url(Nunito/Nunito-Regular.ttf);
+      }
+
+      @font-face {
+        font-family: nunito-bold;
+        src: url(Nunito/Nunito-Bold.ttf);
+        font-weight: bold;
+      }
+
+      @font-face {
+        font-family: nunito-semi;
+        src: url(Nunito/Nunito-SemiBold.ttf);
+        font-weight: bolder;
+      }
+
+      @font-face {
+        font-family: nunito-italic;
+        src: url(Nunito/Nunito-Italic.ttf);
+        font-style: italic;
+      }
+
+      body {
+        box-sizing: border-box;
+        background-color: rgba(24, 52, 146, 0.322);
+        font-family: nunito, sans-serif;
+      }
+      header {
+        text-align: center;
+        color: rgb(51, 51, 54);
+      }
+
+      #title {
+        font-family: nunito-bold;
+        font-size: 50px;
+        margin: 0 auto;
+      }
+
+      #description {
+        margin: 0 auto;
+        font-family: nunito-italic;
+        font-size: 25px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin: 15px auto;
+        width: 95%;
+        padding: 10px;
+        max-width: 500px;
+        background-color: rgba(24, 7, 110, 0.568);
+        border-radius: 5px;
+        box-shadow: 3px 1.5px 5px rgba(24, 7, 110, 0.568);
+      }
+      .group {
+        display: inherit;
+        flex-direction: column;
+        margin: 15px 10px;
+      }
+
+      .group-label {
+        margin-bottom: 3px;
+        font-family: nunito-semi;
+        color: rgb(235, 235, 207);
+        font-size: 20px;
+      }
+
+      input,
+      select,
+      option,
+      textarea,
+      button {
+        padding: 5px;
+        border-radius: 15px;
+        border: none;
+        background-color: #fff;
+        font-family: nunito-italic;
+      }
+
+      input,
+      select,
+      option,
+      textarea:focus {
+        box-shadow: 3px 1.5px 5px rgba(24, 7, 110, 0.568);
+      }
+
+      .education-info,
+      .check-label {
+        display: inline;
+        font-family: nunito;
+        color: rgb(28, 28, 29);
+      }
+
+      #submit {
+        border: none;
+        cursor: pointer;
+        background-color: rgb(24, 7, 110);
+        color: rgb(235, 235, 207);
+        font-family: nunito-bold;
+        font-size: 20px;
+      }
+
+      #submit:hover {
+        box-shadow: 3px 1.5px 5px rgba(24, 7, 110, 0.568);
+      }
+    </style>
   </head>
-  <main>
+
+  <body>
     <header>
       <!-- User Story #1: I can see a title with id="title" in H1 sized text. -->
-      <h1 id="title">Demograhic Survey</h1>
+      <h1 id="title">Coding Survey</h1>
       <!-- User Story #2: I can see a short explanation with id="description" in P sized text. -->
-      <p id="description">
-        This is simple survey form.
-      </p>
+      <p id="description">Please tell us a little about yourself.</p>
     </header>
-
     <!-- User Story #3: I can see a form with id="survey-form". -->
     <form id="survey-form">
       <!-- User Story #4: Inside the form element, I am required to enter my name in a field with id="name". -->
-      <div id="contact-info">
-        <label id="name-label">Name</label>
+      <div class="group">
+        <label id="name-label" class="group-label" for="name">Name</label>
         <input id="name" type="text" placeholder="Full Name" required />
       </div>
       <!-- User Story #5: Inside the form element, I am required to enter an email in a field with id="email". -->
       <!-- User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error. -->
-      <div>
-        <label id="email-label">Email</label>
-        <input id="email" type="email" placeholder="Email" required />
+      <div class="email-info group">
+        <label id="email-label" class="group-label" for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
       </div>
 
       <!-- User Story #7: Inside the form, I can enter a number in a field with id="number". -->
       <!-- User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error. -->
       <!-- User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error. -->
-      <div>
-        <label id="number-label">Age</label>
+      <div class="age-info group">
+        <label id="number-label" class="group-label" for="age"
+          >Age (Optional)</label
+        >
         <input
           id="number"
+          name="age"
           type="number"
-          placeholder="Numbers"
-          min="0"
+          placeholder="Age"
+          min="13"
           max="99"
         />
       </div>
       <!-- User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label". -->
       <!-- User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field. -->
       <!-- User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown". -->
-      <div>
-        <label for="gender">Gender</label>
+      <div class="gender-info group">
+        <label class="group-label" for="gender">Gender</label>
         <select id="dropdown" name="gender">
-          <option>Male</option>
-          <option>Female</option>
-          <option>Non Binary</option>
-          <option>Prefer not to Specify</option>
+          <option disabled selected>Optional</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="non-binary">Non Binary</option>
+          <option value="prefer-not">Prefer not to say</option>
         </select>
       </div>
       <!-- User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. -->
-      <div>
-        <label for="education"> Education (Choose One):</label>
-        <label for="education">
-          <input type="radio" name="education" value="degree" /> CS Degree
+      <div class="education-info group">
+        <p class="group-label">Education</p>
+        <label class="radio-label" for="education">
+          <input
+            type="radio"
+            name="education"
+            class="radio-btn"
+            value="student"
+          />
+          Grade School
         </label>
-        <label for="education">
-          <input type="radio" name="education" value="self" /> Self-Taught
+        <label class="radio-label" for="education">
+          <input
+            type="radio"
+            name="education"
+            class="radio-btn"
+            value="degree"
+          />
+          CS Degree
+        </label>
+        <label class="radio-label" for="education">
+          <input
+            class="radio-label"
+            type="radio"
+            name="education"
+            class="radio-btn"
+            value="self"
+          />
+          Self-Taught
         </label>
       </div>
       <!-- User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. -->
-      <div>
-        <label for="language">Preferred Programming Languages:</label>
-        <input type="checkbox" name="language" value="js" /> JS </label>
-        <label> <input type="checkbox" name="language" value="python" /> Python </label>
-        <label> <input type="checkbox" name="language" value="java" /> Java </label>
-        <label> <input type="checkbox" value="c" /> C </label>
+      <div class="language-info group">
+        <p class="group-label">Preferred Programming Languages:</p>
+        <label class="check-label">
+          <input type="checkbox" name="language" class="check-btn" value="js" />
+          JS
+        </label>
+        <label class="check-label">
+          <input
+            type="checkbox"
+            name="language"
+            class="check-btn"
+            value="python"
+          />
+          Python
+        </label>
+        <label class="check-label">
+          <input
+            type="checkbox"
+            name="language"
+            class="check-btn"
+            value="java"
+          />
+          Java
+        </label>
+        <label class="check-label">
+          <input type="checkbox" name="language" class="check-btn" value="c" />
+          C
+        </label>
       </div>
       <!-- User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments. -->
-      <div>
-        <p>Enter Comments Here.</p>
-        <textarea id="textarea" placeholder="Comments"> </textarea>
+      <div class="textarea-info group">
+        <p class="group-label">Enter Comments Here.</p>
+        <textarea class="textarea-input" placeholder="Comments"> </textarea>
       </div>
       <!-- User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
-      <div>
-        <button id="submit">Submit</button>
+      <div class="submit-btn-info group">
+        <button id="submit" type="submit">Submit</button>
       </div>
     </form>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-  </main>
+  </body>
 </html>

@@ -5,86 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FCC-Tribute Page</title>
+
+    <style>
+      /* User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size. */
+      body {
+        box-sizing: border-box;
+        background-color: #faf9f6;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #1b0000;
+      }
+
+      #img-caption {
+        color: #331800;
+      }
+
+      header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      /* User Story #9: The img element should be centered within its parent element. */
+      #title {
+        font-size: 45px;
+      }
+      #img-div {
+        margin: -15px auto 0 auto;
+      }
+      #image {
+        display: block;
+        width: 95%;
+        max-width: 200px;
+        margin: 0 auto;
+        border-radius: 100%;
+      }
+      #tribute-info {
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 25px auto 20px auto;
+        padding-right: 25px;
+      }
+
+      #tribute-text {
+        text-align: left;
+        color: #331800;
+      }
+      ul {
+        max-width: 550px;
+        text-align: justify;
+        line-height: 1.5;
+      }
+
+      li {
+        margin: 15px;
+      }
+      footer {
+        font-size: 12px;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: #5f0000;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
-  <style>
-    /* User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size. */
-    body {
-      box-sizing: boarder-box;
-      background-color: #faf9f6;
-    }
-    h1,
-    h2,
-    h3 {
-      color: #1b0000;
-    }
 
-    #img-caption {
-      color: #331800;
-    }
-
-    header {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-
-    main {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-    /* User Story #9: The img element should be centered within its parent element. */
-    #title{
-      font-size: 45px;
-    }
-    #img-div{
-      margin: -15px auto 0 auto;
-    }
-    #image {
-      display: block;
-      width: 95%;
-      max-width: 200px;
-      margin: 0 auto;
-      border-radius: 100%;
-    }
-    #tribute-info {
-      background-color: #fff;
-      border-radius: 5px;
-      margin: 25px auto 20px auto;
-      padding-right: 25px;
-    }
-
-    #tribute-text {
-      text-align: left;
-      color: #331800;
-    }
-    ul {
-      max-width: 550px;
-      /* margin: 0 auto 50px auto; */
-      text-align: justify;
-      line-height: 1.5;
-    }
-
-    li {
-      margin: 15px;
-    }
-    footer {
-      font-size: 12px;
-      text-align: center;
-    }
-    a {
-      text-decoration: none;
-      color: #5f0000;
-    }
-    a:hover{
-      text-decoration:underline;
-    }
-
-  </style>
   <body>
     <!-- User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements. -->
     <header>
