@@ -33,7 +33,7 @@
 
     main {
       position: relative;
-      background: rgba(226, 133, 12, 0.267)
+      background: rgba(226, 133, 12, 0.267);
     }
 
     li {
@@ -48,7 +48,6 @@
     .container {
       max-width: 1000px;
       width: 100%;
-      ;
     }
 
     #submit {
@@ -62,55 +61,53 @@
       background: transparent;
       cursor: pointer;
     }
-    
-    .grid{
-      display:flex;
-      
+
+    .grid {
+      display: flex;
     }
     #header {
       position: fixed;
       top: 0;
       min-height: 75px;
       padding: 0 20px;
-      display:flex;
-      justify-content:space-around;
-      align-items:center;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       background: rgba(226, 133, 12, 0.267);
-      
     }
 
-    @media(min-width:600px){
+    @media (min-width: 600px) {
       #header {
-        flex-wrap:wrap;
+        flex-wrap: wrap;
       }
     }
 
-    #logo{
-      width: 15%;
+    #logo {
+      width: 60vw;
       border: 1px solid red;
     }
 
     @media (max-width: 650px) {
-      #logo{
+      #logo {
         margin-top: 15px;
+        width: 100%;
         position: relative;
       }
     }
 
-    .logo > img{
+    .logo > img {
       width: 100%;
       height: 100%;
       max-width: 300px;
       display: flex;
-      justify-content:center;
+      justify-content: center;
       align-content: center;
       text-align: center;
       margin-left: 20px;
-      
     }
 
-    @media (max-width: 650px){
-      .logo > img{
+    @media (max-width: 650px) {
+      .logo > img {
         margin: 0 auto;
       }
     }
@@ -119,42 +116,107 @@
       font-weight: 600;
     }
 
-    @media (max-width: 650){
-      #nav-bar{
+    @media (max-width: 650px) {
+      #nav-bar {
         margin-top: 10px;
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content:center;
-        align-items:center;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         padding: 0 50px;
       }
+      nav li {
+        padding-bottom: 5px;
+      }
     }
 
-    li{
+    nav > ul {
       width: 35vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     }
 
-    #header-img {
-      max-width: 100px;
-      height: auto;
+    @media (max-width: 650px) {
+      nav > ul {
+        flex-direction: column;
+      }
+    }
+
+    #sign-up {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 200px;
+      margin-top: 30px;
+    }
+
+    #sign-up > h2 {
+      margin-bottom: 20px;
+      word-wrap: break-word;
+    }
+
+    #sign-up input[type="email"] {
+      max-width: 275px;
       width: 100%;
+      padding: 5px;
     }
 
-
-    #head-link {
-      /* position: float; */
-      float: right;
+    #sign-up input[type="submit"]:hover {
+      background-color: rgb(226, 134, 12);
     }
+
+    @media (max-width: 650px) {
+      #sign-up {
+        margin-top: 120px;
+      }
+    }
+
     #about-info {
-      position: relative;
-      height: auto;
+      margin-top: 50px;
     }
-    #video {
-      max-width: 500px;
-      height: auto;
-      width: 100%;
+
+    #about-info .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 125px;
+      width: 20vw;
+      color: rgb(226, 134, 12);
+    }
+
+    @media (max-width: 550px) {
+      #about-info .icon {
+        display: none;
+      }
+    }
+
+    #about-info .desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 125px;
+      width: 80vw;
+      padding: 5px;
+    }
+
+    @media (max-width: 55px) {
+      #about-info .desc {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        height: 150px;
+      }
+    }
+
+    @media(max-width:650px){
+      #about-info{
+        margin-top: 0;
+      }
     }
 
     /* User Story #14: My product landing page should have at least one media query. */
@@ -226,7 +288,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="sign-up">
         <h2>Sign Up For More Information</h2>
         <form action="https://www.freecodecamp.com/email-submit" id="form">
           <!-- User Story #7: My landing page has a form element with a corresponding id="form". -->
@@ -249,6 +311,7 @@
       <section id="video-contain">
         <video
           id="video"
+          height= '325'
           src="/product_landing_pg/assets/pexels-cristian-rojas-7586158.mp4"
           frameborder="0"
           allowfullscreen
