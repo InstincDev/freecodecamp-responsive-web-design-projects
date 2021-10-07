@@ -9,7 +9,7 @@
   <body>
     <main id="main-doc">
       <section class="main-section" id="what_is_css?">
-        <header class="topic">What Is CSS?</header>
+        <header class="topic"><h2>What Is CSS?</h2></header>
         <div>
           <p>
             Like HTML, CSS is not a programming language. It's not a markup
@@ -298,48 +298,153 @@
       </section>
 
       <section class="main-section" id="fonts_and_text">
-        <header class="topic">Fonts And Text</header>
+        <header class="topic"><h2>Fonts And Text</h2></header>
+        <div>
+          <p>
+            Now that we've explored some CSS fundamentals, let's improve the
+            appearance of the example by adding more rules and information to
+            the <code>style.css</code> file.
+          </p>
+          <ol>
+            <li>
+              First, find the
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font"
+                >output from Google Fonts</a
+              >
+              that you previously saved from
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like"
+                >What will your website look like?</a
+              >
+              . Add the <code>&lt;link> </code> element somewhere inside your
+              <code>index.html</code>'s head (anywhere between the
+              <code>&lt;head></code> and <code>&lt;/head></code> tags). It looks
+              something like this:
+              <div class="example">
+                <pre>
+                            <code>
+                        &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+                            </code>
+                        </pre>
+              </div>
+              This code links your page to a style sheet that loads the Open
+              Sans font family with your webpage.
+            </li>
+            <li>
+              Next, delete the existing rule you have in your
+              <code>style.css</code> file. It was a good test, but let's not
+              continue with lots of red text.
+            </li>
+            <li>
+              Add the following lines (shown below), replacing the
+              <code>font-family</code> assignment with your
+              <code>font-family</code> selection from
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font"
+                >What will your website look like?</a
+              >. The property <code>font-family</code> refers to the font(s) you
+              want to use for text. This rule defines a global base font and
+              font size for the whole page. Since
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html"
+                ><code>&lt;html></code></a
+              >
+              is the parent element of the whole page, all elements inside it
+              inherit the same <code>font-size</code> and
+              <code>font-family</code>.
+              <div class="example">
+                <pre>
+                    <code>
+                        html {
+                                font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+                                font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
+                                }
+                    </code>
+                </pre>
+              </div>
+              <div class="note">
+                <p>
+                  <strong>Note:</strong> Anything in CSS between
+                  <code>/*</code> and <code>*/</code> is a
+                  <strong>CSS comment</strong>. The browser ignores comments as
+                  it renders the code. CSS comments are a way for you to write
+                  helpful notes about your code or logic.
+                </p>
+              </div>
+            </li>
+            <li>
+              Now let's set font sizes for elements that will have text inside
+              the HTML body (<a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+                ><code>&lt;h1></code></a
+              >,
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li"
+                ><code>&lt;li></code></a
+              >,
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"
+                ><code>&lt;p></code></a
+              >
+              and ). We'll also center the heading. Finally, let's expand the
+              second ruleset (below) with settings for line height and letter
+              spacing to make body content more readable.
+              <div class="example">
+                <pre>
+                        <code>
+                            h1 {
+                                font-size: 60px;
+                                text-align: center;
+                               }
+                              
+                            p, li {
+                                font-size: 16px;
+                                line-height: 2;
+                                letter-spacing: 1px;
+                                }
+                        </code>
+                    </pre>
+              </div>
+            </li>
+          </ol>
+          <p>
+            Adjust the <code>px</code> values as you like. Your work-in-progress
+            should look similar to this:
+          </p>
+          <div>
+              <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-font-small.png" alt="A mozilla log and some paragraphs, a sans-serif font has been adjusted, and the main page heading has been centered">
+          </div>
+        </div>
       </section>
       <section class="main-section" id="css:_all_about_boxes">
-        <header class="topic">CSS: All About Boxes</header>
+        <header class="topic"><h2>CSS: All About Boxes</h2></header>
+            <p>Something you'll notice about writing CSS: a lot of it is about boxes. This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.</p>
+            <div>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/boxes.jpg" alt="large crate boxes stacked side by sie and on top of each other">
+            </div>
+            <p>CSS layout is mostly based on the <em>box model</em>. Each box taking up space on your page has properties like:</p>
+            <ul>
+                <li>
+                    <code>padding</code>, the space around the content. In the example below, it is the space around the paragraph text.
+                </li>
+                <li>
+                   <code>border</code>, the solid line that is just outside the padding.
+                </li>
+                <li>
+                   <code>margin</code>, the space around the outside of the border.
+                </li>
+            </ul>
+
       </section>
       <section class="main-section" id="conclusion">
-        <header class="topic">Conclusion</header>
+        <header class="topic"><h2>Conclusion</h2></header>
       </section>
       <section class="main-section" id="reference">
-        <header class="topic">Reference</header>
+        <header class="topic"><h2>Reference</h2></header>
       </section>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
 
-<!-- User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). -->
-
-<!-- User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5. -->
-
-<!-- User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section. -->
-
-<!-- User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java"). -->
-
-<!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
-
-<!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
-
-<!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
-
-<!-- User Story #8: I can see a nav element with a corresponding id="navbar". -->
-
-<!-- User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation. -->
-
-<!-- User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section. -->
-
-<!-- User Story #11: The header element in the navbar must come before any link (a) elements in the navbar. -->
-
-<!-- User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world"). -->
-
-<!-- User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header. -->
-
-<!-- User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
-
-<!-- User Story #15: My Technical Documentation page should use at least one media query. -->
