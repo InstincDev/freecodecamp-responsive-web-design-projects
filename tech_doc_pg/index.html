@@ -10,185 +10,291 @@
     <main id="main-doc">
       <section class="main-section" id="what_is_css?">
         <header class="topic">What Is CSS?</header>
-        <p>
-          Like HTML, CSS is not a programming language. It's not a markup
-          language either. CSS is a style sheet language. CSS is what you use to
-          selectively style HTML elements. For example, this CSS selects
-          paragraph text, setting the color to red:
-        </p>
-        <code>p { color: red; }</code>
-        <p>
-          Let's try it out! Using a text editor, paste the three lines of CSS
-          (above) into a new file. Save the file as style.css in a directory
-          named styles.
-        </p>
-        <p>
-          To make the code work, we still need to apply this CSS (above) to your
-          HTML document. Otherwise, the styling won't change the appearance of
-          the HTML. (If you haven't been following our project, pause here to
-          read Dealing with files and
-          <li></li>
-          HTML basics.)
-        </p>
+        <div>
+          <p>
+            Like HTML, CSS is not a programming language. It's not a markup
+            language either. <strong>CSS is a style sheet language.</strong> CSS
+            is what you use to selectively style HTML elements. For example,
+            this CSS selects paragraph text, setting the color to red:
+          </p>
+
+          <div class="example">
+            <pre>
+                <code>p { 
+                    color: red;
+                  }
+                </code>
+            </pre>
+          </div>
+          <p>
+            Let's try it out! Using a text editor, paste the three lines of CSS
+            (above) into a new file. Save the file as style.css in a directory
+            named <code>styles</code>.
+          </p>
+          <p>
+            To make the code work, we still need to apply this CSS (above) to
+            your HTML document. Otherwise, the styling won't change the
+            appearance of the HTML. (If you haven't been following our project,
+            pause here to read
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+              >Dealing with files</a
+            >
+            and
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"
+              >HTML basics</a
+            >.)
+          </p>
+        </div>
+
         <ol>
           <li>
-            Open your index.html file. Paste the following line in the head
-            (between the
-            <head>
-              and
-            </head>
-            tags):
-            <code>&lt;link href="styles/style.css" rel="stylesheet"></code>
+            Open your <code>index.html</code> file. Paste the following line in
+            the head (between the
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"
+              ><code>&lt;head></code></a
+            >
+            and the <code>&lt;/head></code> tags):
+
+            <div>
+              <pre>
+                    <code>
+                        &lt;link href="styles/style.css" rel="stylesheet">
+                    </code>
+                </pre>
+            </div>
           </li>
           <li>
-            Save index.html and load it in your browser. You should see
-            something like this:
-            <img
-              src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png"
-              alt="A mozilla logo and some paragraphs. The paragraph text has been styled red by out css."
-            />
+            Save <code>index.html</code> and load it in your browser. You should
+            see something like this:
           </li>
         </ol>
+        <div>
+          <img
+            src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png"
+            alt="A mozilla logo and some paragraphs. The paragraph text has been styled red by out css."
+          />
+        </div>
         <p>
           If your paragraph text is red, congratulations! Your CSS is working.
         </p>
         <h3>Anatomy of a CSS ruleset</h3>
-        <p>
-          Let's dissect the CSS code for red paragraph text to understand how it
-          works :
-        </p>
-        <img
-          src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png"
-          alt="close up image of the css code used to change paragragh element text red"
-        />
-        <p>
-          The whole structure is called a ruleset. (The term ruleset is often
-          referred to as just rule.) Note the names of the individual parts:
-        </p>
+        <div>
+          <p>
+            Let's dissect the CSS code for red paragraph text to understand how
+            it works :
+          </p>
+          <div>
+            <img
+              src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png"
+              alt="close up image of the css code used to change paragragh element text red"
+            />
+          </div>
+          <p>
+            The whole structure is called a
+            <strong> ruleset</strong>. (The term <em>ruleset</em> is often
+            referred to as just <em>rule</em> .) Note the names of the
+            individual parts:
+          </p>
+          <div>
+            <h4>Selector</h4>
+            <p>
+              This is the HTML element name at the start of the ruleset. It
+              defines the element(s) to be styled (in this example,
+              <code>&lt;p></code>
+              elements). To style a different element, change the selector.
+            </p>
+          </div>
 
-        <h4>Selector</h4>
-        <p>
-          This is the HTML element name at the start of the ruleset. It defines
-          the element(s) to be styled (in this example, &lt;p> elements). To
-          style a different element, change the selector.
-        </p>
+          <div>
+            <h4>Declaration</h4>
+            <p>
+              This is a single rule like <code>color: red;</code>. It specifies
+              which of the element's <strong>properties</strong> you want to
+              style.
+            </p>
+          </div>
+          <h4>Properties</h4>
+          <div>
+            <p>
+              These are ways in which you can style an HTML element. (In this
+              example, <code>color</code> is a property of the
+              <code>&lt;p></code> elements.) In CSS, you choose which properties
+              you want to affect in the rule.
+            </p>
+          </div>
 
-        <h4>Declaration</h4>
-        <p>
-          This is a single rule like color: red;. It specifies which of the
-          element's properties you want to style.
-        </p>
+          <div>
+            <h4>Property value</h4>
+            <p>
+              To the right of the property—after the colon—there is the
+              <strong>property value</strong> . This chooses one out of many
+              possible appearances for a given property. (For example, there are
+              many <code>color</code> values in addition to <code> red</code>.)
+            </p>
+          </div>
 
-        <h4>Properties</h4>
-        <p>
-          These are ways in which you can style an HTML element. (In this
-          example, color is a property of the &lt;p>elements.) In CSS, you
-          choose which properties you want to affect in the rule.
-        </p>
+          <p>Note the other important parts of the syntax:</p>
 
-        <h4>Property value</h4>
-        <p>
-          To the right of the property—after the colon—there is the property
-          value. This chooses one out of many possible appearances for a given
-          property. (For example, there are many color values in addition to
-          red.)
-        </p>
+          <ul>
+            <li>
+              Apart from the selector, each ruleset must be wrapped in curly
+              braces. <code>({})</code>
+            </li>
+            <li>
+              Within each declaration, you must use a colon <code>(:)</code> to
+              separate the property from its value or values.
+            </li>
+            <li>
+              Within each ruleset, you must use a semicolon <code>(;)</code> to
+              separate each declaration from the next one.
+            </li>
+          </ul>
+          <p>
+            To modify multiple property values in one ruleset, write them
+            separated by semicolons, like this:
+          </p>
+          <div class="example">
+            <pre>
+                  <code>
+                      p {
+                          color: red;
 
-        <p>Note the other important parts of the syntax:</p>
-        <ul>
-          <li>
-            Apart from the selector, each ruleset must be wrapped in curly
-            braces. ({})
-          </li>
-          <li>
-            Within each declaration, you must use a colon (:) to separate the
-            property from its value or values.
-          </li>
-          <li>
-            Within each ruleset, you must use a semicolon (;) to separate each
-            declaration from the next one.
-          </li>
-        </ul>
-        <p>
-          To modify multiple property values in one ruleset, write them
-          separated by semicolons, like this:
-        </p>
-        <code>p { color: red; width: 500px; border: 1px solid black; }</code>
+                          width: 500px;
+
+                          border: 1px solid black;
+                        }
+                    </code>
+              </pre>
+          </div>
+        </div>
+
         <h3>Selecting multiple elements</h3>
-        <p>
-          You can also select multiple elements and apply a single ruleset to
-          all of them. Separate multiple selectors by commas. For example:
-        </p>
-        <code>p, li, h1 { color: red; }</code>
+        <div>
+          <p>
+            You can also select multiple elements and apply a single ruleset to
+            all of them. Separate multiple selectors by commas. For example:
+          </p>
+          <div class="example">
+            <pre>
+                <code>
+                    p, li, h1 {
+                                color: red;
+                              }
+                </code>
+            </pre>
+          </div>
+        </div>
+
         <h3>Different types of selectors</h3>
-        <p>
-          There are many different types of selectors. The examples above use
-          element selectors, which select all elements of a given type. But we
-          can make more specific selections as well. Here are some of the more
-          common types of selectors:
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <td>Selector name</td>
-              <td>What does it select</td>
-              <td>Example</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                Element selector (sometimes called a tag or type selector)
-              </td>
-              <td>All HTML elements of the specified type.</td>
-              <td>p selects &lt;p></td>
-            </tr>
-            <tr>
-              <td>ID selector</td>
-              <td>
-                The element on the page with the specified ID. On a given HTML
-                page, each id value should be unique.
-              </td>
-              <td>#my-id selects &lt;p id="my-id"> or &lt;a id="my-id"></td>
-            </tr>
-            <tr>
-              <td>Class selector</td>
-              <td>
-                The element(s) on the page with the specified class. Multiple
-                instances of the same class can appear on a page.
-              </td>
-              <td>
-                .my-class selects &lt;p class="my-class"> and &lt;a
-                class="my-class">
-              </td>
-            </tr>
-            <tr>
-              <td>Attribute selector</td>
-              <td>The element(s) on the page with the specified attribute.</td>
-              <td>
-                img[src] selects &lt;img src="myimage.png"> but not &lt;img>
-              </td>
-            </tr>
-            <tr>
-              <td>Pseudo-class selector</td>
-              <td>
-                The specified element(s), but only when in the specified state.
-                (For example, when a cursor hovers over a link.)
-              </td>
-              <td>
-                a:hover selects &lt;a>, but only when the mouse pointer is
-                hovering over the link.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          There are many more selectors to discover. To learn more, see the MDN
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors"
-            >Selectors guide</a
-          >.
-        </p>
+        <div>
+          <p>
+            There are many different types of selectors. The examples above use
+            <strong>element selectors</strong>, which select all elements of a
+            given type. But we can make more specific selections as well. Here
+            are some of the more common types of selectors:
+          </p>
+          <table class="table_example">
+            <thead>
+              <tr>
+                <th>Selector name</th>
+                <th>What does it select</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Element selector (sometimes called a tag or type selector)
+                </td>
+                <td>All HTML elements of the specified type.</td>
+                <td>
+                  <pre>
+                    <code>
+                        p
+                        selects &lt;p>
+                    </code>
+                </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>ID selector</td>
+                <td>
+                  The element on the page with the specified ID. On a given HTML
+                  page, each id value should be unique.
+                </td>
+
+                <td>
+                  <pre>
+                    <code>
+                        #my-id
+                        selects &lt;p id="my-id"> or
+                        &lt;a id="my-id">
+                    </code>
+                  </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>Class selector</td>
+                <td>
+                  The element(s) on the page with the specified class. Multiple
+                  instances of the same class can appear on a page.
+                </td>
+                <td>
+                  <pre>
+                    <code>
+                        .my-class
+                        selects &lt;p class="my-class">
+                        and &lt;a class="my-class">
+                    </code>
+                    </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>Attribute selector</td>
+                <td>
+                  The element(s) on the page with the specified attribute.
+                </td>
+                <td>
+                  <pre>
+                        <code>
+                            img[src]
+                            selects
+                            &lt;img src="myimage.png"> but
+                            not &lt;img>
+                        </code>
+                    </pre>
+                </td>
+              </tr>
+              <tr>
+                <td>Pseudo-class selector</td>
+                <td>
+                  The specified element(s), but only when in the specified
+                  state. (For example, when a cursor hovers over a link.)
+                </td>
+                <td>
+                  <pre>
+                        <code>
+                            a:hover
+                            selects &lt;a>, but only when the
+                            mouse pointer is hovering over the link.
+                        </code>
+                    </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            There are many more selectors to discover. To learn more, see the
+            MDN
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors"
+              >Selectors guide</a
+            >.
+          </p>
+        </div>
       </section>
 
       <section class="main-section" id="fonts_and_text">
