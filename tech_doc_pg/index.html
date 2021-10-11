@@ -4,28 +4,156 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Technical Documentation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        font-family: Verdana, sans-serif;
+        font-size: 15px;
+        line-height: 25px;
+      }
+
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 15px 0;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      h3 {
+        font-size: 25px;
+      }
+
+      h4 {
+        font-size: 25px;
+        font-weight: 200;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      pre,
+      code {
+        font-family: monospace;
+        font-size: 17px;
+
+        background-color: #eee;
+        padding: 0 3px;
+      }
+
+      ul,
+      ol {
+        margin: 30px;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .main-section {
+        margin: 30px;
+      }
+
+      .note {
+        margin: 0 0 24px;
+        background-color: #ddeaff;
+        border-left: 6px solid #0072b3;
+        padding: 12px;
+      }
+
+      .example {
+        margin: 20px auto;
+        border-left: 6px solid #005282;
+        /* max-width: 100%; */
+        /* min-width: 300px; */
+        background-color: #eee;
+        min-width: 300px;
+      }
+      .table_example {
+        width: 100%;
+        overflow-x: auto;
+        background-color: #eee;
+        border: 1px solid grey;
+        border-bottom: none;
+        border-collapse: collapse;
+        line-height: 25px;
+      }
+
+      thead {
+        background-color: rgb(216, 213, 213);
+      }
+
+      th:first-child {
+        border-left: none;
+        min-width: 200px;
+      }
+
+      th {
+        padding: 12px;
+        border-left: 1px solid grey;
+        border-bottom: 1px solid grey;
+      }
+
+      td:first-child {
+        border-left: none;
+        min-width: 200px;
+      }
+
+      td {
+        text-align: left;
+        padding: 12px;
+        border-left: 1px solid grey;
+        border-bottom: 1px solid grey;
+      }
+
+      /* td > pre{
+        width: auto;
+        /* min-width: 50px; 
+      }*/
+    </style>
   </head>
   <body>
     <nav id="navbar">
       <header>
-          <ul>
-              <li>
-                  <a href="#what_is_css?" class="nav-link">What is CSS?</a>
-              </li>
-              <li>
-                  <a href="#fonts_and_text" class="nav-link">Fonts and Text</a>
-              </li>
-              <li>
-                  <a href="#css:_all_about_boxes" class="nav-link">CSS: All About Boxes</a>
-              </li>
-              <li>
-                  <a href="#conclusion" class="nav-link">Conclusion</a>
-              </li>
-              <li>
-                  <a href="#reference" class="nav-link">Reference</a>
-              </li>
-          </ul>
+        <ul>
+          <li>
+            <a href="#what_is_css?" class="nav-link">What is CSS?</a>
+          </li>
+          <li>
+            <a href="#fonts_and_text" class="nav-link">Fonts and Text</a>
+          </li>
+          <li>
+            <a href="#css:_all_about_boxes" class="nav-link"
+              >CSS: All About Boxes</a
+            >
+          </li>
+          <li>
+            <a href="#conclusion" class="nav-link">Conclusion</a>
+          </li>
+          <li>
+            <a href="#reference" class="nav-link">Reference</a>
+          </li>
+        </ul>
       </header>
     </nav>
 
@@ -42,10 +170,10 @@
 
           <div class="example">
             <pre>
-                <code>p { 
-                    color: red;
-                  }
-                </code>
+                <code>
+          p { 
+              color: red;
+          }</code>
             </pre>
           </div>
           <p>
@@ -80,11 +208,10 @@
             >
             and the <code>&lt;/head></code> tags):
 
-            <div>
+            <div class="example">
               <pre>
                     <code>
-                        &lt;link href="styles/style.css" rel="stylesheet">
-                    </code>
+      &lt;link href="styles/style.css" rel="stylesheet"></code>
                 </pre>
             </div>
           </li>
@@ -181,14 +308,11 @@
           <div class="example">
             <pre>
                   <code>
-                      p {
-                          color: red;
-
-                          width: 500px;
-
-                          border: 1px solid black;
-                        }
-                    </code>
+            p {
+                color: red;
+                width: 500px;
+                border: 1px solid black;
+              }</code>
               </pre>
           </div>
         </div>
@@ -202,10 +326,9 @@
           <div class="example">
             <pre>
                 <code>
-                    p, li, h1 {
-                                color: red;
-                              }
-                </code>
+            p, li, h1 {
+                        color: red;
+                      }</code>
             </pre>
           </div>
         </div>
@@ -235,9 +358,8 @@
                 <td>
                   <pre>
                     <code>
-                        p
-                        selects &lt;p>
-                    </code>
+              p
+              selects &lt;p></code>
                 </pre>
                 </td>
               </tr>
@@ -251,10 +373,9 @@
                 <td>
                   <pre>
                     <code>
-                        #my-id
-                        selects &lt;p id="my-id"> or
-                        &lt;a id="my-id">
-                    </code>
+              #my-id
+              selects &lt;p id="my-id"> or
+              &lt;a id="my-id"></code>
                   </pre>
                 </td>
               </tr>
@@ -267,10 +388,9 @@
                 <td>
                   <pre>
                     <code>
-                        .my-class
-                        selects &lt;p class="my-class">
-                        and &lt;a class="my-class">
-                    </code>
+              .my-class
+              selects &lt;p class="my-class">
+              and &lt;a class="my-class"></code>
                     </pre>
                 </td>
               </tr>
@@ -282,11 +402,10 @@
                 <td>
                   <pre>
                         <code>
-                            img[src]
-                            selects
-                            &lt;img src="myimage.png"> but
-                            not &lt;img>
-                        </code>
+              img[src]
+              selects
+              &lt;img src="myimage.png"> but
+              not &lt;img></code>
                     </pre>
                 </td>
               </tr>
@@ -298,11 +417,10 @@
                 </td>
                 <td>
                   <pre>
-                        <code>
-                            a:hover
-                            selects &lt;a>, but only when the
-                            mouse pointer is hovering over the link.
-                        </code>
+                    <code>
+              a:hover
+              selects &lt;a>, but only when the
+              mouse pointer is hovering over the link.</code>
                     </pre>
                 </td>
               </tr>
@@ -345,10 +463,9 @@
               something like this:
               <div class="example">
                 <pre>
-                            <code>
-                        &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-                            </code>
-                        </pre>
+                    <code>
+    &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></code>
+                </pre>
               </div>
               This code links your page to a style sheet that loads the Open
               Sans font family with your webpage.
@@ -378,11 +495,12 @@
               <div class="example">
                 <pre>
                     <code>
-                        html {
-                                font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
-                                font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
-                                }
-                    </code>
+    html {
+          /* px means "pixels": the base font size is now 10 pixels high */
+          font-size: 10px; 
+          /* this should be the rest of the output you got from Google fonts */
+          font-family: "Open Sans", sans-serif; 
+          }</code>
                 </pre>
               </div>
               <div class="note">
@@ -414,18 +532,17 @@
               spacing to make body content more readable.
               <div class="example">
                 <pre>
-                        <code>
-                            h1 {
-                                font-size: 60px;
-                                text-align: center;
-                               }
-                              
-                            p, li {
-                                font-size: 16px;
-                                line-height: 2;
-                                letter-spacing: 1px;
-                                }
-                        </code>
+                  <code>
+            h1 {
+                font-size: 60px;
+                text-align: center;
+                }
+
+            p, li {
+                font-size: 16px;
+                line-height: 2;
+                letter-spacing: 1px;
+                }</code>
                     </pre>
               </div>
             </li>
@@ -507,12 +624,11 @@
         <h3>Changing the page color</h3>
         <div class="example">
           <pre>
-                    <code>
-                        html {
-                            background-color: #00539F;
-                            }
-                    </code>
-                </pre>
+            <code>
+          html {
+              background-color: #00539F;
+              }</code>
+          </pre>
         </div>
         <p>
           This rule sets a background color for the entire page. Change the
@@ -525,16 +641,15 @@
         <h3>Styling the body</h3>
         <div class="example">
           <pre>
-                    <code>
-                        body {
-                            width: 600px;
-                            margin: 0 auto;
-                            background-color: #FF9500;
-                            padding: 0 20px 20px 20px;
-                            border: 5px solid black;
-                          }
-                    </code>
-                </pre>
+            <code>
+          body {
+              width: 600px;
+              margin: 0 auto;
+              background-color: #FF9500;
+              padding: 0 20px 20px 20px;
+              border: 5px solid black;
+            }</code>
+          </pre>
         </div>
         <p>
           There are several declarations for the <code>&lt;body></code> element.
@@ -585,15 +700,14 @@
         <h3>Positioning and styling the main page title</h3>
         <div class="example">
           <pre>
-                    <code>
-                        h1 {
-                            margin: 0;
-                            padding: 20px 0;
-                            color: #00539F;
-                            text-shadow: 3px 3px 1px black;
-                          }
-                    </code>
-                </pre>
+            <code>
+          h1 {
+              margin: 0;
+              padding: 20px 0;
+              color: #00539F;
+              text-shadow: 3px 3px 1px black;
+            }</code>
+          </pre>
         </div>
         <p>
           You may have noticed there's a horrible gap at the top of the body.
@@ -638,13 +752,12 @@
         <h3>Centering the image</h3>
         <div class="example">
           <pre>
-                    <code>
-                        img {
-                            display: block;
-                            margin: 0 auto;
-                          } 
-                    </code>
-                </pre>
+            <code>
+          img {
+              display: block;
+              margin: 0 auto;
+            }</code>
+          </pre>
         </div>
         <p>
           Next, we center the image to make it look better. We could use the
