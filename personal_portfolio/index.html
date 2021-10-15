@@ -24,13 +24,13 @@
 
       h1 {
         font-family: "Squada One", sans-serif;
-        font-size: 1.5rem;
+        font-size: 3rem;
       }
 
       h2 {
         font-family: "Raleway", serif;
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 2rem;
       }
 
       ul {
@@ -44,12 +44,11 @@
       }
 
       li {
-        display:flex;
+        display: flex;
         justify-content: space-around;
         align-items: center;
         height: 100%;
         padding: 0 5px;
-        
       }
 
       a {
@@ -57,8 +56,9 @@
         color: #61a6ad;
       }
 
-      a:hover{
-        color: #ffce6d
+      a:hover {
+        color: #ffce6d;
+        font-weight: 600;
       }
 
       img {
@@ -78,7 +78,7 @@
         z-index: 5;
         position: fixed;
         background-color: #291625;
-        box-shadow: 0 5px 5px 5px rgba(41, 22, 37, 0.5);
+        box-shadow: 0 5px 5px rgba(41, 22, 37, 0.5);
       }
 
       /* Welcome Section */
@@ -300,6 +300,54 @@
           opacity: 1;
         }
       }
+
+      /* Porfolio Projects */
+      #projects {
+        text-align: center;
+        padding: 0.5rem 0.5rem;
+      }
+
+      .section-header {
+        color: #f6f6e9;
+        padding-bottom: 0.5rem;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 1rem;
+        row-gap: 1rem;
+      }
+      .project-tile {
+        padding: 10px;
+        background-color: #61a6ab;
+      }
+
+      .project-img {
+        height: 85%;
+      }
+
+      .project-img:hover {
+        box-shadow: 0 5px 5px 5px rgba(41, 22, 37, 0.5);
+      }
+
+      figcaption {
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+      }
+      .project-title {
+        display: flex;
+        align-items: center;
+        font-family: "Raleway", serif;
+        font-weight: 400;
+        color: #291625;
+      }
+
+      .project-title:hover {
+        color: #ffce6d;
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
@@ -337,9 +385,8 @@
       </div>
     </section>
     <section id="projects">
-      <h2 class="section-header">Portfio Projects</h2>
-      <hr />
-      <div class="grid">
+      <h2 class="section-header">Portfolio Projects</h2>
+      <div class="container">
         <figure class="project-tile">
           <a href="https://codepen.io/instincdev/pen/xxrmgYe" target="_blank">
             <img
@@ -357,7 +404,7 @@
               alt="Image of coding survey form"
               class="project-img"
             />
-            <figcaption class="project-title">Coding Survey Form</figcaption>
+            <figcaption class="project-title">Coding Survey</figcaption>
           </a>
         </figure>
         <figure class="project-tile">
