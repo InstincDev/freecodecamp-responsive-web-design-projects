@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InstincDev FCC Portfolio</title>
     <style>
-
       /* 
       # Text Animation with background based on A Pen created on CodePen.io. Original URL: [https://codepen.io/yemon/pen/YrPmQr](https://codepen.io/yemon/pen/YrPmQr). */
       @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,400;1,600&family=Squada+One&display=swap");
@@ -15,7 +14,7 @@
         padding: 0;
         scroll-behavior: smooth;
         /* default font size = 16px, 1rem = 16px */
-        font-size: 16px;
+        font-size: 32px;
       }
 
       body {
@@ -25,24 +24,41 @@
 
       h1 {
         font-family: "Squada One", sans-serif;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
 
       h2 {
         font-family: "Raleway", serif;
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
 
       ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         list-style: none;
         font-family: "Raleway", serif;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 2rem;
+      }
+
+      li {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        padding: 0 5px;
+        
       }
 
       a {
         text-decoration: none;
+        color: #61a6ad;
+      }
+
+      a:hover{
+        color: #ffce6d
       }
 
       img {
@@ -50,20 +66,28 @@
         width: 100%;
       }
 
+      /* Navigation Bar */
+
       #navbar {
         display: flex;
+        justify-content: flex-end;
+        margin: 0 auto;
         top: 0px;
         width: 100%;
+        height: 3rem;
         z-index: 5;
         position: fixed;
         background-color: #291625;
+        box-shadow: 0 5px 5px 5px rgba(41, 22, 37, 0.5);
       }
 
+      /* Welcome Section */
       #welcome-section {
         border: 1px solid yellow;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: baseline;
+        align-content: center;
         /* margin: 0px auto; */
         text-align: center;
         font-size: 2.2rem;
@@ -93,7 +117,7 @@
         display: float;
         right: 0;
         /* z-index: 0; */
-        
+
         /* justify-content: center;
         align-items: baseline; */
         margin: 0 10px;
@@ -125,6 +149,7 @@
         color: #61a6ab;
       }
 
+      /* Animation Text Function Calls */
       .dropping-texts > div:nth-child(1) {
         animation: roll 5s linear 2 0s;
       }
@@ -148,7 +173,7 @@
         animation: stay 1s ease-in-out 10s;
         animation-fill-mode: forwards;
       }
-
+      /* Keyframes */
       @keyframes roll {
         0% {
           font-size: 0px;
@@ -281,9 +306,18 @@
     <nav id="navbar">
       <ul>
         <li><a href="#welcome-section">Home</a></li>
-        <a href="#projects"><li>Portfolio</li></a>
-        <a href="#blog"><li>Blog</li></a>
-        <a href="#contact"><li>Contact</li></a>
+
+        <li>
+          <a href="#projects">Portfolio</a>
+        </li>
+
+        <li>
+          <a href="#blog">Blog</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
     <section id="welcome-section">
