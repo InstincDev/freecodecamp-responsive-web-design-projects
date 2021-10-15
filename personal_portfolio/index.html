@@ -6,9 +6,275 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InstincDev FCC Portfolio</title>
     <style>
-        #welcome-section{
 
+      /* 
+      # Text Animation with background based on A Pen created on CodePen.io. Original URL: [https://codepen.io/yemon/pen/YrPmQr](https://codepen.io/yemon/pen/YrPmQr). */
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,400;1,600&family=Squada+One&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        /* default font size = 16px, 1rem = 16px */
+        font-size: 16px;
+      }
+
+      body {
+        box-sizing: border-box;
+        background-color: #291625;
+      }
+
+      h1 {
+        font-family: "Squada One", sans-serif;
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-family: "Raleway", serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+
+      ul {
+        list-style: none;
+        font-family: "Raleway", serif;
+        font-weight: 400;
+        font-size: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      #navbar {
+        display: flex;
+        top: 0px;
+        width: 100%;
+        z-index: 5;
+        position: fixed;
+        background-color: #291625;
+      }
+
+      #welcome-section {
+        border: 1px solid yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin: 0px auto; */
+        text-align: center;
+        font-size: 2.2rem;
+        overflow: hidden;
+        height: 100vh;
+        color: white;
+        overflow: hidden;
+        animation: bg 5s linear 2;
+      }
+
+      .welcome-text {
+        border: 1px solid red;
+        display: float;
+        left: 0px;
+        /* margin: 0px auto; */
+        text-align: center;
+        font-family: "Raleway", serif;
+        font-weight: 400;
+        font-size: 2rem;
+        color: white;
+        height: 36px;
+        vertical-align: -2px;
+      }
+
+      .dropping-texts {
+        border: 1px solid blue;
+        display: float;
+        right: 0;
+        /* z-index: 0; */
+        
+        /* justify-content: center;
+        align-items: baseline; */
+        margin: 0 10px;
+        text-align: center;
+        font-family: "Squada One", sans-serif;
+        width: 5rem;
+        height: 36px;
+        vertical-align: -2px;
+      }
+
+      .dropping-texts > div {
+        font-size: 0px;
+        opacity: 0;
+        margin-left: 10px;
+        position: absolute;
+        box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
+      }
+      .begin {
+        font-size: 3rem;
+        display: inline-block;
+        /* margin: 0px auto; */
+        color: #ffce6d;
+      }
+
+      .end {
+        font-size: 3rem;
+        /* margin: 0 auto; */
+        display: inline-block;
+        color: #61a6ab;
+      }
+
+      .dropping-texts > div:nth-child(1) {
+        animation: roll 5s linear 2 0s;
+      }
+      .dropping-texts > div:nth-child(2) {
+        animation: roll 5s linear 2 1s;
+      }
+      .dropping-texts > div:nth-child(3) {
+        animation: roll 5s linear 2 2s;
+      }
+      .dropping-texts > div:nth-child(4) {
+        animation: roll2 5s linear 2 3s;
+      }
+
+      .stay-text {
+        border: 1px solid green;
+        display: float;
+        right: 0;
+        z-index: 1;
+        margin: 0 30%;
+        text-align: center;
+        animation: stay 1s ease-in-out 10s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes roll {
+        0% {
+          font-size: 0px;
+          opacity: 0;
+          margin-left: -30px;
+          margin-top: 0px;
+          transform: rotate(-25deg);
         }
+        3% {
+          opacity: 1;
+          transform: rotate(0deg);
+        }
+        5% {
+          font-size: 2rem;
+          opacity: 1;
+          margin-left: 0px;
+          margin-top: 0px;
+        }
+        20% {
+          font-size: 2rem;
+          opacity: 1;
+          margin-left: 0px;
+          margin-top: 0px;
+          transform: rotate(0deg);
+        }
+        27% {
+          font-size: 0px;
+          opacity: 0.5;
+          margin-left: 20px;
+          margin-top: 100px;
+        }
+        100% {
+          font-size: 0px;
+          opacity: 0;
+          margin-left: -30px;
+          margin-top: 0px;
+          transform: rotate(15deg);
+        }
+      }
+
+      @keyframes roll2 {
+        0% {
+          font-size: 0px;
+          opacity: 0;
+          margin-left: -30px;
+          margin-top: 0px;
+          transform: rotate(-25deg);
+        }
+        3% {
+          opacity: 1;
+          transform: rotate(0deg);
+        }
+        5% {
+          font-size: inherit;
+          opacity: 1;
+          margin-left: 0px;
+          margin-top: 0px;
+        }
+        30% {
+          font-size: inherit;
+          opacity: 1;
+          margin-left: 0px;
+          margin-top: 0px;
+          transform: rotate(0deg);
+        }
+        37% {
+          font-size: 400rem;
+          opacity: 0;
+          margin-left: -1000px;
+          margin-top: -800px;
+        }
+        100% {
+          font-size: 0px;
+          opacity: 0;
+          margin-left: -30px;
+          margin-top: 0px;
+          transform: rotate(15deg);
+        }
+      }
+
+      @keyframes bg {
+        0% {
+          background: #291625;
+        }
+        3% {
+          background: #61a6ab;
+        }
+        20% {
+          background: #61a6ab;
+        }
+        23% {
+          background: #ffce6d;
+        }
+        40% {
+          background: #ffce6d;
+        }
+        43% {
+          background: #cd3f14;
+        }
+        60% {
+          background: #cd3f14;
+        }
+        63% {
+          background: #291625;
+        }
+        80% {
+          background: #291625;
+        }
+        83% {
+          background: #291625;
+        }
+        100% {
+          background: #291625;
+        }
+      }
+
+      @keyframes stay {
+        from {
+          font-size: 0rem;
+          opacity: 0;
+        }
+        to {
+          font-size: 3rem;
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body>
@@ -21,10 +287,20 @@
       </ul>
     </nav>
     <section id="welcome-section">
-      <h1>InstincDev</h1>
-      <h2>I am a</h2>
-      <h2>Web Developer</h2>
-      <h2>Technical Writer</h2>
+      <div class="welcome-text"><h1>I am</h1></div>
+      <div class="dropping-texts">
+        <div>an Educator</div>
+        <div>a Web Developer</div>
+        <div>a Technical Writer</div>
+        <div>
+          <span class="begin">Instinc</span>
+          <span class="end">Dev</span>
+        </div>
+        <div class="stay-text">
+          <span class="begin">Instinc</span>
+          <span class="end">Dev</span>
+        </div>
+      </div>
     </section>
     <section id="projects">
       <h2 class="section-header">Portfio Projects</h2>
@@ -63,7 +339,7 @@
         <figure class="project-tile">
           <a href="https://codepen.io/instincdev/pen/WNEboWG" target="_blank">
             <img
-              src="./assets/tech_doc.png"
+              src="./assets/tech_docs.png"
               alt="Image of CSS technical documentation page"
               class="project-img"
             />
@@ -120,7 +396,12 @@
         <a href="https://www.linkedin.com/in/chanel-timberlake-856b3414a/"
           >LinkedIn</a
         >
-        <a id="profile-link" href="https://github.com/InstincDev" target="_blank">Github</a>
+        <a
+          id="profile-link"
+          href="https://github.com/InstincDev"
+          target="_blank"
+          >Github</a
+        >
         <a href="https://twitter.com/instincdev">Twitter</a>
         <a href="mailto:crene7722@gmail.com">Email</a>
       </div>
