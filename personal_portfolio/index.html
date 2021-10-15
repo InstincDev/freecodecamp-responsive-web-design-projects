@@ -33,6 +33,12 @@
         font-size: 2rem;
       }
 
+      h3{
+        font-family: "Raleway", serif;
+        font-weight: 400;
+        font-size: 1rem;
+      }
+
       ul {
         display: flex;
         justify-content: center;
@@ -66,6 +72,13 @@
         width: 100%;
       }
 
+      img:hover{
+        box-shadow: 0 5px 5px 5px rgba(41, 22, 37, 0.5);
+      }
+
+      hr {
+        color: #cd3f14;
+      }
       /* Navigation Bar */
 
       #navbar {
@@ -317,7 +330,9 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         column-gap: 1rem;
         row-gap: 1rem;
+        padding-bottom: 0.5rem;
       }
+
       .project-tile {
         padding: 10px;
         background-color: #61a6ab;
@@ -327,15 +342,12 @@
         height: 85%;
       }
 
-      .project-img:hover {
-        box-shadow: 0 5px 5px 5px rgba(41, 22, 37, 0.5);
-      }
-
       figcaption {
         height: 2.5rem;
         display: flex;
         justify-content: center;
       }
+
       .project-title {
         display: flex;
         align-items: center;
@@ -348,6 +360,35 @@
         color: #ffce6d;
         font-weight: 600;
       }
+
+      /* Blog Section */
+      #blog {
+        text-align: center;
+        padding: 0.5rem 0.5rem;
+      }
+
+      .blog-tile {
+        padding: 10px;
+        background-color: #ffce6d;
+      }
+
+      .blog-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Raleway", serif;
+        font-weight: 400;
+        color: #291625;
+      }
+
+      .blog-title > p{
+        font-size: 0.5rem;
+      }
+
+      .blog-title:hover{
+        font-weight: 600;
+      }
+
     </style>
   </head>
   <body>
@@ -384,6 +425,7 @@
         </div>
       </div>
     </section>
+    <hr />
     <section id="projects">
       <h2 class="section-header">Portfolio Projects</h2>
       <div class="container">
@@ -431,10 +473,11 @@
         </figure>
       </div>
     </section>
+    <hr />
     <section id="blog">
       <h2 class="section-header">Blog Posts</h2>
-      <hr />
-      <div class="grid">
+
+      <div class="container">
         <figure class="blog-tile">
           <a href="https://instincdev.hashnode.dev/series/technical-writing">
             <img
@@ -450,7 +493,7 @@
             </figcaption>
           </a>
         </figure>
-        <figure class="project-tile">
+        <figure class="blog-tile">
           <a
             href="https://instincdev.hashnode.dev/series/100daysofcode"
             target="_blank"
