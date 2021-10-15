@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c5df4182a4.js"
+      crossorigin="anonymous"
+    ></script>
     <title>InstincDev FCC Portfolio</title>
     <style>
       /* 
@@ -33,7 +37,7 @@
         font-size: 2rem;
       }
 
-      h3{
+      h3 {
         font-family: "Raleway", serif;
         font-weight: 400;
         font-size: 1rem;
@@ -72,7 +76,7 @@
         width: 100%;
       }
 
-      img:hover{
+      img:hover {
         box-shadow: 0 5px 5px 5px rgba(41, 22, 37, 0.5);
       }
 
@@ -96,18 +100,17 @@
 
       /* Welcome Section */
       #welcome-section {
-        border: 1px solid yellow;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: baseline;
-        align-content: center;
         /* margin: 0px auto; */
         text-align: center;
         font-size: 2.2rem;
         overflow: hidden;
+        width: 100%;
         height: 100vh;
         color: white;
-        overflow: hidden;
         animation: bg 5s linear 2;
       }
 
@@ -149,15 +152,15 @@
         box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
       }
       .begin {
-        font-size: 3rem;
+        margin-right: 0.5px;
+        font-size: 1.5rem;
         display: inline-block;
-        /* margin: 0px auto; */
         color: #ffce6d;
       }
 
       .end {
-        font-size: 3rem;
-        /* margin: 0 auto; */
+        margin-left: -1px;
+        font-size: 1.5rem;
         display: inline-block;
         color: #61a6ab;
       }
@@ -381,14 +384,47 @@
         color: #291625;
       }
 
-      .blog-title > p{
+      .blog-title > p {
         font-size: 0.5rem;
       }
 
-      .blog-title:hover{
+      .blog-title:hover {
         font-weight: 600;
       }
 
+      /* Contact Section */
+      #contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+      }
+
+      .header2 {
+        color: #cd3f14;
+        padding: 1rem;
+      }
+
+      .header2 > h3 {
+        font-size: 1.3rem;
+      }
+
+      #profile {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      #profile > a {
+        margin: 0 1rem;
+      }
+
+      i {
+        color: #cd3f14;
+      }
     </style>
   </head>
   <body>
@@ -513,21 +549,32 @@
         </figure>
       </div>
     </section>
+    <hr />
     <section id="contact">
-      <h2 class="section-header">Let's get to work!</h2>
-      <h3 class="header2">Contact me @</h3>
+      <div class="section-header"><h2>Let's get to work!</h2></div>
+      <div class="header2"><h3>Contact me @</h3></div>
       <div id="profile">
-        <a href="https://www.linkedin.com/in/chanel-timberlake-856b3414a/"
-          >LinkedIn</a
+        <a
+          href="https://www.linkedin.com/in/chanel-timberlake-856b3414a/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i> <span class="begin">Linked</span
+          ><span class="end">In</span></a
         >
         <a
           id="profile-link"
           href="https://github.com/InstincDev"
           target="_blank"
-          >Github</a
+          ><i class="fab fa-github"></i> <span class="begin">Git</span
+          ><span class="end">hub</span></a
         >
-        <a href="https://twitter.com/instincdev">Twitter</a>
-        <a href="mailto:crene7722@gmail.com">Email</a>
+        <a href="https://twitter.com/instincdev" target="_blank">
+          <i class="fab fa-twitter"></i> <span class="begin">Twit</span
+          ><span class="end">ter</span>
+        </a>
+        <a href="mailto:crene7722@gmail.com" target="_blank"
+          ><i class="far fa-envelope"></i> <span class="begin">E</span
+          ><span class="end">mail</span></a
+        >
       </div>
     </section>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
