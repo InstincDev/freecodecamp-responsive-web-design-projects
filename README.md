@@ -11,4 +11,10 @@ Tribute to Eliza Hamilton
 Coding Survey
 
 ## Product Page
-Loud Sound Speakers (WIP)
+Loud Sound Speakers
+
+## Technical Documentation Page
+CSS Docs
+
+## Personal Portfolio
+Portfolio of all FCC Projects
